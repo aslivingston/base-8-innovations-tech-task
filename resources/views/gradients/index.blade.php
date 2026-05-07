@@ -19,7 +19,7 @@
     </x-slot>
 
     <div class="py-12">
-        <div class="mx-auto max-w-6xl sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
             @if(session('success'))
                 <div class="mb-6 rounded-lg bg-green-50 p-4 text-sm text-green-700">
                     {{ session('success') }}

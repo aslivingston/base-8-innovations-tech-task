@@ -27,7 +27,7 @@
     }"
     class="space-y-8"
 >
-    <div class="overflow-hidden rounded-3xl border border-gray-200 bg-gray-50 p-3 shadow-sm">
+    <div class="overflow-hidden rounded-3xl shadow-sm">
         <div
             class="flex h-72 items-end rounded-2xl p-6 shadow-inner transition-all duration-300"
             :style="`background: ${cssValue}`"

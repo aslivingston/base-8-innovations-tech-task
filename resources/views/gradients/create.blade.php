@@ -11,7 +11,7 @@
     </x-slot>
 
     <div class="py-12">
-        <div class="mx-auto max-w-3xl sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-3xl px-4sm:px-6 lg:px-8">
             <div class="rounded-3xl bg-white p-6 shadow-sm sm:p-8">
                 <form method="POST" action="{{ route('gradients.store') }}">
                     @include('gradients._form')

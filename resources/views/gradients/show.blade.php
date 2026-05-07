@@ -12,7 +12,7 @@
     </x-slot>
 
     <div class="py-12">
-        <div class="mx-auto max-w-4xl sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
             <div class="overflow-hidden rounded-2xl bg-white shadow-sm">
                 <div
                     class="h-80"

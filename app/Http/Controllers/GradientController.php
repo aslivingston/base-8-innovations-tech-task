@@ -5,9 +5,13 @@ namespace App\Http\Controllers;
 use App\Models\Gradient;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 class GradientController extends Controller
 {
+
+    use AuthorizesRequests;
+
     public function index()
     {
         $gradients = Auth::user()->gradients()->latest()->get();

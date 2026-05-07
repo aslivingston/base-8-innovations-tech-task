@@ -36,21 +36,21 @@ class GradientController extends Controller
 
     public function show(Gradient $gradient)
     {
-        $this->authorizeGradient($gradient);
+        $this->authorize('view', $gradient);
 
         return view('gradients.show', compact('gradient'));
     }
 
     public function edit(Gradient $gradient)
     {
-        $this->authorizeGradient($gradient);
+        $this->authorize('update', $gradient);
 
         return view('gradients.edit', compact('gradient'));
     }
 
     public function update(Request $request, Gradient $gradient)
     {
-        $this->authorizeGradient($gradient);
+        $this->authorize('update', $gradient);
 
         $data = $request->validate([
             'name' => ['required', 'string', 'max:100'],
@@ -66,15 +66,10 @@ class GradientController extends Controller
 
     public function destroy(Gradient $gradient)
     {
-        $this->authorizeGradient($gradient);
+        $this->authorize('delete', $gradient);
 
         $gradient->delete();
 
         return redirect()->route('gradients.index');
-    }
-
-    private function authorizeGradient(Gradient $gradient)
-    {
-        abort_if($gradient->user_id !== Auth::id(), 403);
     }
 }
